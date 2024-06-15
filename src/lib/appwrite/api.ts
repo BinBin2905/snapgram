@@ -65,6 +65,8 @@ export async function getCurrentUser() {
   try {
     const currentAccount = await account.get();
     console.log("currentAccount after account.get():", currentAccount.$id);
+    console.log("currentAccount after account.get():", currentAccount.email);
+    console.log("currentAccount after account.get():", currentAccount.password);
 
     if (!currentAccount) throw Error;
 
